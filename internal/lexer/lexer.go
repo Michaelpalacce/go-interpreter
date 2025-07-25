@@ -105,6 +105,13 @@ func (l *Lexer) skipWhitespace() {
 	}
 }
 
+// readIdentifier will attempt to read a sequence of letters and digits, as long as it doesn't start with a digit
+// read isLetter for what is accepted as a letter.
+// Examples:
+// - test - valid
+// - test123 - valid
+// - test_123 - valid
+// - 123test - not valid
 func (l *Lexer) readIdentifier() string {
 	position := l.position
 	for isLetter(l.ch) || isDigit(l.ch) {
