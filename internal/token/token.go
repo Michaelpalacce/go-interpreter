@@ -12,9 +12,11 @@ const (
 	ILLEGAL = "ILLEGAL"
 	EOF     = "EOF"
 
-	// Identifiers + literals
-	IDENT  = "IDENT" // add, foobar, x, y, ...
-	INT    = "INT"   // 1343456
+	// IDENT is an identifier like add, foobar, x, y, etc
+	IDENT = "IDENT"
+
+	// 1234567890
+	INT    = "INT"
 	TRUE   = "true"
 	FALSE  = "false"
 	IF     = "if"
